@@ -1,6 +1,6 @@
 import torch
-from .data import corrupt_mnist
-from .model import MyAwesomeModel
+from cnn_mnist.data import corrupt_mnist
+from cnn_mnist.model import MyAwesomeModel
 import typer
 
 

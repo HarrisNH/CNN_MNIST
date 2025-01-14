@@ -1,13 +1,13 @@
 import torch
 import matplotlib.pyplot as plt
 from torch import optim
-from .data import corrupt_mnist
-from .model import MyAwesomeModel
+from cnn_mnist.data import corrupt_mnist
+from cnn_mnist.model import MyAwesomeModel
 import typer
-
+print("training started")
 DEVICE = torch.device("cuda" if torch.cuda.is_available() else "mps" if torch.backends.mps.is_available() else "cpu")
 
-def train(lr: float = 1e-3, batch_size: int = 32, epochs: int = 5) -> None:
+def train(lr: float = 1e-3, batch_size: int = 32, epochs: int = 1) -> None:
     """Train a model on MNIST."""
     print("Training day and night")
     print(lr)
